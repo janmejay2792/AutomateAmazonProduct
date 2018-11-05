@@ -13,7 +13,7 @@ namespace BrowseApplication
 
         public void editBox(IWebDriver driver, IWebElement element, String value) {
 
-            if (element != null | element.Displayed | element.Enabled)
+            if (element != null && element.Displayed && element.Enabled)
                 element.SendKeys(value);
             else
                 Console.WriteLine("Object Not Found");
