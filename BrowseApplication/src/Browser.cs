@@ -33,6 +33,7 @@ namespace BrowseApplication.src
                     break;
                 default:
                     Console.WriteLine("Chrome Browser Launching");
+                    driver = new ChromeDriver();
                     break;
             }return driver;
 
