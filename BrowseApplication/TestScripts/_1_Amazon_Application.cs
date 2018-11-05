@@ -40,6 +40,7 @@ namespace BrowseApplication
 
 
         //Tear Down the Application
+        [TearDown]
         public void tearDown() {
             driver.Quit();
         }
