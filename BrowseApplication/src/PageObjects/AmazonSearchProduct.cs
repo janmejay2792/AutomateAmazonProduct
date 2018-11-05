@@ -11,10 +11,6 @@ namespace BrowseApplication
     class AmazonSearchProduct
     {
         IWebDriver driver;
-
-        
-
-
         public AmazonSearchProduct() {
             this.driver = driver;
             PageFactory.InitElements(driver, this);
@@ -22,6 +18,7 @@ namespace BrowseApplication
 
         [FindsBy(How = How.Name, Using = "field-keywords")]
         private IWebElement SearchBox { get; set; }
+        // Search the product in Edit Field
         public void searchEdit(string product) {
             if(SearchBox.Displayed && SearchBox.Enabled)
             SearchBox.SendKeys(product);
