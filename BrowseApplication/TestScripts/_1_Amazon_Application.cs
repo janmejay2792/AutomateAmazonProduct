@@ -20,7 +20,7 @@ namespace BrowseApplication
         [SetUp]
         public void setUp() {
             Browser browser = new Browser();
-            browser.SelectBrowseForExecution();
+            this.driver=browser.SelectBrowseForExecution();
             driver.Navigate().GoToUrl("https://www.amazon.in/");
             Assert.Equals("Amazon", driver.FindElement(By.XPath("//span[text()='Amazon']")).GetAttribute("text"));
 
